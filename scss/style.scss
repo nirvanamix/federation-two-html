@@ -1,0 +1,15 @@
+@import "default-style.scss";
+@import "main.scss";
+
+@media (max-width: 1200px){
+	@import "1200-style.scss";
+}
+@media (max-width: 992px){
+	@import "992-style.scss";
+}
+@media (max-width: 767px){
+	@import "768-style.scss";
+}
+@media (max-width: 480px){
+	@import "480-style.scss";
+}
