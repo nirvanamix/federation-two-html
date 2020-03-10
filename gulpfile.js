@@ -44,6 +44,7 @@ function watch_fun(){
 	gulp.watch('./**/*.html', browerReload);
 	gulp.watch('./**/*.js', browerReload);
 	gulp.watch('./**/*.php', browerReload);
+	gulp.watch('./**/*.json', browerReload);
 }
 // init tasks
 gulp.task('default', gulp.parallel(lacal_host, watch_fun));

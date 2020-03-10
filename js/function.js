@@ -31,66 +31,24 @@ var info_windows = {
 }
 info_windows.fun();
 /******* info for widnow *******/
-var items_catalog = {
+var checkbox = {
 	fun: function(){
-		$('.items-catalog .show-more span').click(function(event) {
-			$('.items-catalog .show-more span').not($(this)).parents('.item').removeClass('active');
-			$('.items-catalog .show-more span').not($(this)).parent('.show-more').removeClass('active');
-
-			var h = $(this).parents('.item').outerHeight();
-			$(this).parent('.show-more').toggleClass('active');
-			if($(this).parents('.show-more').hasClass('active') == true) $(this).parents('.item').css('height', h + 'px');
-			else $(this).parents('.show-more').parents('.item').css('height', 'auto');
-			$(this).parents('.item').toggleClass('active');
+		function check(th) {
+			var checked = th.find('input').prop('checked');
+			if(checked == true) th.addClass('active');
+			else th.removeClass('active');
+		}
+		$('label.checkbox').each(function(index, el) {
+			check($(this))
 		});
-		jQuery(document).click( function(event){
-			if(jQuery(event.target).closest(".items-catalog > .item").length ) 
-			return;
-				$('.items-catalog .item').removeClass('active');
-				$('.items-catalog .show-more').removeClass('active');
-			event.stopPropagation();
-		});
-
-
-		$(window).resize(function(event) {
-			$('.items-catalog .item').removeClass('active');
-			$('.items-catalog .show-more').removeClass('active');
+		$('label.checkbox').click(function(event) {
+			$('label.checkbox').each(function(index, el) {
+				check($(this))
+			});
 		});
 	}
 }
-items_catalog.fun();
-/*--------------------------*/
-var sharing = {
-	fun: function(){
-		$('.sharing > span').click(function(event) {
-			$('.sharing > span').not($(this)).parents('.sharing').find('.drob-sharing').slideUp(200);
-			$(this).parents('.sharing').find('.drob-sharing').slideToggle(200);
-		});
-		jQuery(document).click( function(event){
-			if(jQuery(event.target).closest(".sharing").length ) 
-			return;
-				$('.sharing').find('.drob-sharing').slideUp(200);
-			event.stopPropagation();
-		});
-	}
-}
-sharing.fun();
-/*---------show-catalog---------*/
-var show_catalog = {
-	fun: function(){
-		$('.show-catalog').click(function(event) {
-			event.preventDefault();
-			$('.items-catalog').addClass('active');
-			$(this).parents('.link-page').remove();
-		});
-	}
-}
-show_catalog.fun();
-
-
-
-
-
+checkbox.fun();
 
 
 

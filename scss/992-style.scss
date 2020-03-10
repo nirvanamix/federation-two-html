@@ -1,0 +1,176 @@
+html{
+	font-size: 1.33vw;
+}
+body{
+	background-size: 32rem auto;
+}
+.h2, h2{
+	font-size: 3em;
+}
+.container-fluid{
+	max-width: 100%;
+}
+header{
+	padding: 1.6rem 0 1.1rem;
+	.mobile-menu{
+		display: flex;
+	}
+}
+nav{
+	display: none;
+}
+.h1, h1{
+	font-size: 2.5em;
+	margin-bottom: 2.7rem;
+}
+.section-title{
+	padding: 2.2rem 0 3.5rem;
+	h1, .h1{
+		width: 200%;
+	}
+	ul{
+		font-size: 1.4em;
+		li{
+			padding-bottom: 1.5rem;
+		}
+	}
+	.container-fluid{
+		align-items: flex-start;
+		.item{
+			&:first-child{
+				width: 58%;
+			}
+			&:nth-child(2){
+				width: 38.6%;
+				padding-top: 5rem;
+				img{
+					margin-left: -15px;
+				}
+			}
+		}
+	}
+}
+.section-form{
+	padding: 5.3rem 0 1px;
+	.block-title{
+		display: block;
+		margin-bottom: 4.8rem;
+	}
+	h2, .h2{
+		width: 100%;
+		font-size: 3em;
+		line-height: 1.13em;
+		margin-bottom: 1.3rem;
+	}
+	.checks-block{
+		display: flex;
+		h3, .h3{
+			margin-bottom: 0;
+			margin-right: 3.8rem;
+		}
+	}
+}
+.three-label{
+	.label, label{
+		width: 48%;
+	}
+}
+label, .label{
+	margin-bottom: 2.5rem;
+	.title{
+		font-size: 1.6rem;
+	}
+}
+.block-form{
+	padding: 2.9rem 3.3rem 1px;
+}
+.items-catalog{
+	justify-content: space-between;
+	.item{
+		margin-right: 0;
+		width: 48%;
+	}
+	.title-block{
+		padding: 2.8rem 1rem 2.55rem 2.4rem;
+	}
+	ul.ul-list{
+		li{
+			padding: 1.14rem 2rem 1.14rem 4.6rem;
+			&:before{
+				left: 2.8rem;
+			}
+		}
+	}
+	.show-more{
+		padding: 0 2.7rem;
+	}
+}
+.section-main{
+	padding: 22.2rem 0 5.6rem;
+	background-position: 50% 24.3rem;
+	background-size: 53.7rem auto;
+	h2, .h2{
+		margin-bottom: 3.5rem;
+	}
+}
+.owl-action{
+	margin-bottom: 9rem;
+	.owl-stage-outer{
+		height: 25.3rem;
+	}
+	h3, .h3{
+		margin-bottom: 1.5rem;
+	}
+	p{
+		margin-bottom: 1.5rem;
+	}
+	.text-wr{
+		max-width: 62rem;
+	}
+}
+footer{
+	padding: 2.1rem 0 0;
+	.top-footer{
+		flex-wrap: wrap;
+		padding-right: 15px;
+		.item{
+			&:first-child{
+				width: 100%;
+				margin-bottom: 3.2rem;
+			}
+			&:nth-child(2){
+				width: 22.8%;
+			}
+			&:nth-child(3){
+				width: 34.3%;
+			}
+			&:nth-child(4){
+				width: 36%;
+			}
+		}
+	}
+	ul{
+		font-size: 1.5em;
+	}
+	.aplication{
+		width: 15.4rem;
+	}
+	.bottom-footer{
+		ul{
+			font-size: 1.3em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -50,6 +50,7 @@
 					</li>
 				</ul>
 			</nav>
+			<div class="mobile-menu"><div></div><div></div><div></div></div>
 		</div>
 	</header>
 	<section class="section-title">
@@ -91,28 +92,35 @@
 						<h3>
 							Вы можете найти специалиста:
 						</h3>
-						<div class="item">
-							в своём городе
-						</div>
-						<div class="item">
-							онлайн
+						<div class="labels-checkbox">
+							<label class="checkbox">
+								<input type="radio" checked name="radio" data-city="on">
+								в своём городе
+							</label>
+							<label class="checkbox">
+								<input type="radio" name="radio" data-city="off">
+								онлайн
+							</label>
 						</div>
 					</div>
 				</div>
 				<div class="block-form">
 					<div class="three-label">
-						<label>
+						<label data-value="city">
 							<span class="title">
 								Область, регион
 							</span>
 							<select class="select">
-								<option>
+								<option value="all">
+									Все
+								</option>
+								<option value="Kiev">
 									Киев
 								</option>
-								<option>
+								<option value="Vinnitsa">
 									Виницца
 								</option>
-								<option>
+								<option value="Lviv">
 									Львов
 								</option>
 							</select>
@@ -122,66 +130,79 @@
 								Средняя стоимость консультации:
 							</span>
 							<div class="labels-price">
-								<label>
+								<label data-value="min_price">
 									<input type="text" placeholder="от грн.">
 								</label>
-								<label>
+								<label data-value="max_price">
 									<input type="text" placeholder="до грн.">
 								</label>
 							</div>
 						</div>
-						<label>
+						<label data-value="sex">
 							<span class="title">
 								Пол:
 							</span>
 							<select class="select">
-								<option>
+								<option value="all">
 									Не важен
 								</option>
-								<option>
+								<option value="mele">
 									Мужской
 								</option>
-								<option>
+								<option value="female">
 									Женский
 								</option>
 							</select>
 						</label>
-						<label>
+						<label data-value="key-poblem">
 							<span class="title">
 								Работает с проблемой:
 							</span>
 							<input type="text" placeholder="Одно слово или часть слова">
 						</label>
-						<label>
+						<label data-value="equipment">
 							<span class="title">
 								Используемые подходы и техники:
 							</span>
-							<input type="text" placeholder="Сказотерпия">
+							<select class="select">
+								<option value="all">
+									Все
+								</option>
+								<option value="tecnic-1">
+									Техника 1
+								</option>
+								<option value="tecnic-2">
+									Техника 2
+								</option>
+								<option value="tecnic-3">
+									Техника 3
+								</option>
+							</select>
 						</label>
-						<label>
+						<label data-value="experience">
 							<span class="title">
 								Лет практики не менее:
 							</span>
 							<select class="select">
-								<option>
+								<option value="all">
 									Не важено
 								</option>
-								<option>
+								<option value="1">
 									1 год
 								</option>
-								<option>
+								<option value="5">
 									5 лет
 								</option>
-								<option>
+								<option value="10">
 									10 лет
 								</option>
-								<option>
+								<option value="15">
 									15 лет
 								</option>
 							</select>
 						</label>
 					</div>
-					<div class="submit">
+					<div class="submit fill_submit">
 						<input type="submit" value="Найти специалиста">
 					</div>
 				</div>
@@ -190,6 +211,15 @@
 	</section>
 	<main class="section-main">
 		<div class="container-fluid">
+			<h2>
+				Каталог арт-терапевтов
+			</h2>
+			<div class="items-catalog"></div>
+			<div class="link-page link-two link-show-moore">
+				<a href="#" class="show-catalog">
+					Смотреть ещё
+				</a>
+			</div>
 			<h2>
 				Акции
 			</h2>
@@ -239,693 +269,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<h2>
-				Каталог арт-терапевтов
-			</h2>
-			<div class="items-catalog">
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wr-content">
-						<div class="title-block">
-							<div class="img">
-								<img src="img/simple/1.png" alt="">
-							</div>
-							<div class="text-block">
-								<h3>
-									Ирен Кузнецова
-								</h3>
-								<ul class="ul-contact">
-									<li>
-										<a href="tel:+380967856765">
-											<i class="phone"></i>
-											+38 (096) 785 67 65 
-										</a>
-									</li>
-									<li>
-										<a href="mailto:iren@ukr.net">
-											<i class="mail"></i>
-											iren@ukr.net
-										</a>
-									</li>
-								</ul>
-								<div class="reiting-wr">
-									<div class="skype-block">
-										<i class="skype"></i>
-										ireniren
-									</div>
-									<div class="reiting-block">
-										Средняя оценка:
-										<ul class="ul-reiting">
-											<li></li><li></li><li></li><li></li><li class="disabled"></li>
-										</ul>
-									</div>
-								</div>
-								<div class="sharing">
-									<span>
-										Поделиться в соц.сетях
-									</span>
-									<div class="drob-sharing">
-										<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<ul class="ul-list">
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Консультирую: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Опыт: <mark>Киев/Oнлайн</mark>
-							</li>
-							<li>
-								Работаю с запросами: <mark>Семья, финансы, отношения</mark>
-							</li>
-
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-							<li>
-								Стоимость консультации: <mark>500 грн/ч</mark>
-							</li>
-						</ul>
-						<div class="show-more">
-							<span data-default="Подробнее про cпециалиста" data-active="Скрыть информацию"></span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="link-page link-two">
-				<a href="#" class="show-catalog">
-					Смотреть ещё
-				</a>
 			</div>
 		</div>
 	</main>
@@ -1057,6 +400,7 @@
 	</footer>
 	<!-- script -->
 		<script src="js/jquery/jquery-3.4.1.min.js"></script>
+		<script src="js/load-json.js"></script>
 		<!-- functions -->
 		<script src="js/function.js"></script>
 		<!-- query-ui-->
@@ -1066,7 +410,7 @@
 		<script src="js/plugins/owl.carousel.js"></script>
 		<script src="js/plugins/owl.carousel-include.js"></script>
 		<!-- pluso -->
-		<script type="text/javascript">(function() {
+		<!-- <script type="text/javascript">(function() {
 			if (window.pluso)if (typeof window.pluso.start == "function") return;
 			if (window.ifpluso==undefined) { window.ifpluso = 1;
 				var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
@@ -1075,7 +419,7 @@
 				var h=d[g]('body')[0];
 				h.appendChild(s);
 			}})();
-		</script>
+		</script> -->
 	<!-- script -->
 </body>
 </html>

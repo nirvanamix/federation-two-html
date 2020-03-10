@@ -1,8 +1,3 @@
-<svg width="555" height="302" viewBox="0 0 555 302" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="554" height="302">
-<rect width="553.057" height="301.139" fill="#C4C4C4"/>
-</mask>
-<g mask="url(#mask0)">
-<circle cx="208.776" cy="-44.8613" r="332.5" stroke="#F2F7FF" stroke-width="27"/>
-</g>
+<svg width="445" height="281" viewBox="0 0 445 281" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="99" cy="-65" r="332.5" stroke="#F2F7FF" stroke-width="27"/>
 </svg>
