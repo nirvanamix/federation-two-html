@@ -15,7 +15,6 @@ $font-mono: 'PT Mono';
 html{
 	// font-size: 0.521vw;
 	font-size: 0.6945vw;
-	font-size: 8px;
 }
 body{
 	font-family: 'Noto Sans', sans-serif;
@@ -764,64 +763,6 @@ body{
 				width: 100%;
 			}
 		}
-		.drob-sharing{
-			width: 115.8%;
-			position: absolute;
-			top: calc(100% + 0.9rem);
-			left: 0;
-			background: #FFFFFF;
-			box-shadow: 0px 4px 20px rgba(36, 102, 161, 0.5);
-			border-radius: 10px;
-			z-index: 5;
-			padding: 0.9rem 0.9rem 0.1rem;
-			display: none;
-			&:before{
-				content: ''; 
-				position: absolute;
-				top: -1.2rem;
-				left: calc(50% - 0.6rem);
-				border: 0.6rem solid transparent;
-				border-bottom: 0.6rem solid #fff;
-			}
-			a{
-				width: 100%;
-				height: auto;
-				padding: 1.4rem 3.7rem;
-				border-radius: 3px;
-				background: none;
-				background-repeat: no-repeat;
-				display: flex;
-				align-items: center;
-				margin-bottom: 0.7rem;
-				&.pluso-facebook{
-					background-color: #2C54A9;
-					background-image: url(../img/facebook.png);
-					background-size: 1.3rem auto;
-					background-position: 1.2rem bottom;
-					&:before{
-						content: 'Facebook';
-						font-size: 12px;
-						color: #fff;
-						display: block;
-					}
-				}
-				&.pluso-vkontakte{
-					background-color: #5180B8;
-					background-image: url(../img/vk.png);
-					background-size: 1.8rem auto;
-					background-position: 1.2rem 50%;
-					&:before{
-						content: 'Вконтакте';
-						font-size: 12px;
-						color: #fff;
-						display: block;
-					}
-				}
-			}
-		}
-		.pluso-more{
-			display: none !important;
-		}
 	}
 	ul.ul-list{
 		margin-bottom: 2.2rem;
@@ -1038,7 +979,107 @@ footer{
 	-webkit-overflow-scrolling:touch;
 	-moz-overflow-scrolling:touch;
 	overflow-scrolling:touch;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background: rgba(0,0,0,0.8);
+	text-align: center;
+	display: none;
+	&:before {
+		content: "";
+		display: inline-block;
+		min-height: inherit;
+		height: 100%;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.window{
+		width: calc(100% - 10px);
+		max-width: 500px;
+		background: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 4rem 2rem;
+		position: relative;
+		border-radius: 3px;
+		.close{
+			width: 1.9rem;
+			height: 1.9rem;
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			cursor: pointer;
+			transition: opacity 0.3s;
+			&:hover{
+				opacity: 0.8;
+			}
+			&:before, &:after{
+				content: '';
+				width: 100%;
+				height: 2px;
+				display: block;
+				position: absolute;
+				top: calc(50% - 1px;);
+				left: 0;
+				background: $color-blue;
+			}
+			&:before{
+				transform: rotate(45deg);
+			}
+			&:after{
+				transform: rotate(-45deg);
+			}
+		}
+		h2, .h2{
+			font-size: 2rem;
+			letter-spacing: 0;
+			font-family: $font-mono;
+		}
+	}
 }
+.sharing-wr{
+	.pluso-more{
+		display: none !important;
+	}
+	.pluso{
+		& > div{
+			width: 100%;
+		}
+	}
+	.pluso-wrap{
+		a{
+			background-position: 50% !important;
+			width: 3.5rem !important;
+			height: 3.5rem !important;
+			border-radius: 50%;
+			margin: 0 0.5rem !important;
+			&.pluso-facebook{
+				background-color: #2C54A9;
+				background-image: url(../img/facebook.png);
+				background-size: 30% auto;
+			}
+			&.pluso-vkontakte{
+				background-color: #5180B8;
+				background-image: url(../img/vk.png);
+				background-size: 54% auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 // для кнопок в safari

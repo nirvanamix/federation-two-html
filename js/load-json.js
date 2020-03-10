@@ -26,15 +26,8 @@ var items_catalog = {
 }
 var sharing = {
 	fun: function(){
-		$('.sharing > span').click(function(event) {
-			$('.sharing > span').not($(this)).parents('.sharing').find('.drob-sharing').slideUp(200);
-			$(this).parents('.sharing').find('.drob-sharing').slideToggle(200);
-		});
-		jQuery(document).click( function(event){
-			if(jQuery(event.target).closest(".sharing").length ) 
-			return;
-				$('.sharing').find('.drob-sharing').slideUp(200);
-			event.stopPropagation();
+		$('.sharing span').click(function(event) {
+			$('.modal-window').fadeIn(400).addClass('active');
 		});
 	}
 }
@@ -200,9 +193,6 @@ $(function () {
 							<span>
 								Поделиться в соц.сетях
 							</span>
-							<div class="drob-sharing">
-								<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-							</div>
 						</div>
 					</div>
 					<ul class="ul-list">
