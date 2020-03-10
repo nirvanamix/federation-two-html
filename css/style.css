@@ -6454,8 +6454,7 @@ a.ui-button:active,
   font-family: 'PT Mono';
   src: url("../fonts/PTMono/bold/PTMono-Bold.woff") format("woff"), url("../fonts/PTMono/bold/PTMono-Bold.ttf") format("truetype"), url("../fonts/PTMono/bold/PTMono-Bold.svg#PTMono-Bold") format("svg");
   font-weight: 700;
-  font-style: normal;
-  background: url(../fonts/PTMono/bold/); }
+  font-style: normal; }
 
 html {
   font-size: 0.6945vw;
