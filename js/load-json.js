@@ -105,11 +105,6 @@ var fillter_catalog = {
 				if(checked == true) result_fill.work_online =  true
 			}
 			fun_check();
-
-
-			console.log(result_fill)
-
-
 			var remover_id = new Array();
 			for (const prop in result_fill) {
 				for (var i = 0; i < name_json.length; i++) {
@@ -137,7 +132,6 @@ var fillter_catalog = {
 					if(prop == "min_price" || prop == "max_price"){
 						var min =+ result_fill.min_price;
 						var max =+ result_fill.max_price;
-						console.log(min + min)
 						if(min == undefined) min = 0;
 						if(max == undefined) max = Infinity;
 						if(name_json[i].filter.price < min || name_json[i].filter.price > max) remover_id.push(name_json[i].id);
