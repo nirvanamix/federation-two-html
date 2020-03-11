@@ -86,20 +86,49 @@ var fillter_catalog = {
 		});
 		$('.fill_submit input').click(function(event) {
 			event.preventDefault();
+
+			
+
+			
+
+
 			var result_fill = new Object();
 			$(this).parents('form').find('label[data-value]').each(function(index, el) {
 				var th_attr = $(this).attr('data-value');
 				var th_val = $(this).find('input, select').val();
 				if(th_val != "all" && th_val != "") result_fill[th_attr] = th_val
 			});
+
+
+			function fun_check(){
+				var checked = $('input[data-city="off"]').prop('checked');
+				if(checked == true) result_fill.work_online =  true
+			}
+			fun_check();
+
+
+			console.log(result_fill)
+
+
 			var remover_id = new Array();
 			for (const prop in result_fill) {
 				for (var i = 0; i < name_json.length; i++) {
-					if(name_json[i].filter[prop] != result_fill[prop] && prop != "key-poblem" && prop != "min_price" && prop != "max_price" && prop != "experience"){
+					if(name_json[i].filter[prop] != result_fill[prop]
+						&& prop != "key-poblem"
+						&& prop != "min_price"
+						&& prop != "max_price"
+						&& prop != "experience"
+						&& prop != "equipment")
+					{
 						remover_id.push(name_json[i].id);
 					}
 					// key-poblem
 					if(prop == "key-poblem"){
+						if(name_json[i].filter[prop].search(result_fill[prop]) != -1 == false){
+							remover_id.push(name_json[i].id);
+						}
+					}
+					if(prop == "equipment"){
 						if(name_json[i].filter[prop].search(result_fill[prop]) != -1 == false){
 							remover_id.push(name_json[i].id);
 						}
@@ -118,6 +147,13 @@ var fillter_catalog = {
 						var exp_user =+ name_json[i].filter.experience;
 						var ext_select =+ result_fill[prop];
 						if(exp_user < ext_select) remover_id.push(name_json[i].id);
+					}
+					// select online
+					if(prop == "work_online"){
+						var status = name_json[i].filter.work_online;
+						if(status == false){
+							remover_id.push(name_json[i].id);
+						}
 					}
 				}
 			}
