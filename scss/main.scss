@@ -647,6 +647,7 @@ body{
 	}
 	.wr-content{
 		width: 100%;
+		min-height: 100%;
 		background: #fff;
 		padding-bottom: 2.6rem;
 		box-shadow: 0px 4px 20px rgba(36, 102, 161, 0.08);
@@ -835,20 +836,87 @@ body{
 	margin: 0.6rem 0 1.6rem 0;
 	padding-left: 1rem;
 	ul.ul-reiting{
-		margin-left: -0.2rem;
+		margin-left: 0.2rem;
+		position: relative;
+		top: -0.1rem;
 	}
 }
 ul.ul-reiting{
 	display: flex;
 	li{
-		width: 1.7rem;
-		height: 1.6rem;
-		background-image: url(../img/start.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin-left: 0.4rem;
+		display: block;
+		button{
+			width: 1.7rem;
+			height: 1.6rem;
+			background-image: url(../img/start.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin-left: 0.4rem;
+			background-color: transparent;
+			border: none;
+			display: block;
+			cursor: pointer;
+			position: relative;
+		}
 		&.disabled{
-			background-image: url(../img/disabled-start.svg);
+			button{
+				background-image: url(../img/disabled-start.svg);
+			}
+		}
+		&.h_25{
+			button{
+				background-image: url(../img/start-025.svg);
+			}
+		}
+		&.h_5{
+			button{
+				background-image: url(../img/start-05.svg);
+			}
+		}
+		&.h_75{
+			button{
+				background-image: url(../img/start-075.svg);
+			}
+		}
+	}
+	&.hover-reiting{
+		li{
+			button{
+				background-image: url(../img/disabled-start.svg) !important;
+			}
+			&.active{
+				button{
+					background-image: url(../img/start-hover.svg) !important;
+				}
+			}
+		}
+	}
+	&.active{
+		li{
+			button{
+				background-image: url(../img/start-hover.svg) !important;
+				cursor: default;
+			}
+			&.disabled{
+				button{
+					background-image: url(../img/disabled-start.svg) !important;
+				}
+			}
+			&.h_25{
+				button{
+					background-image: url(../img/start-025-hover.svg) !important;
+				}
+			}
+			&.h_5{
+				button{
+					background-image: url(../img/start-05-hover.svg) !important;
+				}
+			}
+			&.h_75{
+				button{
+					background-image: url(../img/start-075-hover.svg) !important;
+				}
+			}
 		}
 	}
 }
@@ -856,9 +924,9 @@ footer{
 	background: url(../img/circle-5.svg) left bottom no-repeat,
 		url(../img/circle-6.svg) right top no-repeat #357BBA;
 		background-size: 31.8rem auto,
-			19.9rem auto;
-	padding: 4.3rem 0 0;
-	color: #fff;
+		19.9rem auto;
+		padding: 4.3rem 0 0;
+		color: #fff;
 	.top-footer{
 		padding-bottom: 2.1rem;
 		display: flex;
@@ -1074,8 +1142,25 @@ footer{
 
 
 
-
-
+.modal-error, .modal-success{
+	position: fixed;
+	top: 10%;
+	left: 0;
+	z-index: 999;
+	background: #f00;
+	font-size: 1.4em;
+	color: #fff;
+	padding: 1rem 2rem;
+	border-radius: 0 0.5rem 0.5rem 0;
+	transition: transform 0.4s;
+	transform: translateX(-100%);
+	&.active{
+		transform: translateX(0);
+	}
+}
+.modal-success{
+	background: #98BA1F;
+}
 
 
 
