@@ -141,11 +141,30 @@ header{
 		align-items: center;
 		justify-content: center;
 		display: none;
+		transition: background 0.3s;
+		&.active{
+			background: #B7D7EA;
+			div{
+				&:nth-child(1){
+					top: 12%;
+					transform: rotate(45deg);
+				}
+				&:nth-child(2){
+					opacity: 0;
+				}
+				&:nth-child(3){
+					top: -12%;
+					transform: rotate(-45deg);
+				}
+			}
+		}
 		div{
 			width: 43%;
 			height: 1px;
 			background: #fff;
 			margin: 0.3rem 0;
+			position: relative;
+			top: 0;
 		}
 	}
 }

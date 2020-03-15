@@ -40,4 +40,15 @@ jQuery(document).ready(function($) {
 		}
 	}
 	moda_window.fun();
+	var mobile_menu = {
+		fun: function(){
+			$('.mobile-menu').click(function(event) {
+				$('html, body').toggleClass('body-overflow');
+				$(window).scrollTop(0);
+				$(this).toggleClass('active');
+				$('nav').toggleClass('active');
+			});
+		}
+	}
+	mobile_menu.fun();
 });

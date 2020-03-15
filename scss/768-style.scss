@@ -1,6 +1,9 @@
 html{
 	font-size: 3.125vw;
-	// font-size: 1.25vw;
+	font-size: 10px;
+}
+body{
+	background-size: 23rem auto;
 }
 h1, .h1{
 	font-size: 2rem;
@@ -32,7 +35,98 @@ header{
 	h2, .h2{
 		font-size: 2rem;
 	}
+	.checks-block{
+		display: block;
+		padding-right: 0;
+		h3, .h3{
+			margin-right: 0;
+			margin-bottom: 2rem;
+			br{
+				display: none;
+			}
+		}
+	}
 }
+.labels-checkbox{
+	display: block;
+	label{
+		margin-right: 0;
+		margin-bottom: 3.4rem;
+	}
+}
+.three-label{
+	display: block;
+	label, .label{
+		width: 100%;
+	}
+}
+.block-form{
+	padding: 2.4rem 2.5rem 1px;
+}
+
+.items-catalog{
+	display: block;
+	.item{
+		width: 100%;
+	}
+	ul.ul-contact{
+		font-size: 1.3em;
+	}
+	.title-block{
+		padding: 2.8rem 0.5rem 2.55rem 1.2rem;
+		.img{
+			width: 33%;
+		}
+		.text-block{
+			width: 62%;
+			margin-bottom: 2rem;
+		}
+	}
+}
+.reiting-block{
+	width: 100%;
+}
+
+.owl-action{
+	.owl-stage-outer{
+		height: auto;
+		.item{
+			padding: 3rem 4rem;
+		}
+	}
+	.link-page.link-two{
+		a{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 250px;
+		}
+	}
+}
+footer{
+	.top-footer{
+		.item{
+			width: 100% !important;
+			margin-bottom: 2rem;
+		}
+	}
+	ul{
+		font-size: 1.3em;
+		li{
+			&:before{
+				top: 0.4rem;
+			}
+		}
+	}
+}
+.section-form{
+	background-size: 16.4rem auto, 22.1rem auto;
+}
+
+
+
+
+
 
 
 
