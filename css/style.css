@@ -6835,7 +6835,11 @@ body .ui-widget.ui-widget-content {
   border-radius: 0 0 3px 3px;
   border-top: none;
   margin-top: -1px;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 35.5rem;
+  max-height: 36rem;
+  overflow-y: auto;
+  overflow-x: hidden; }
   body .ui-widget.ui-widget-content li:last-child {
     margin-bottom: -1px;
     border-radius: 0 0 3px 3px; }
@@ -7126,6 +7130,11 @@ body .ui-menu .ui-state-active {
         background: url(../img/vector-more.svg) no-repeat;
         background-size: contain;
         margin-left: 1.1rem; }
+  .items-catalog .error-div {
+    width: 100%;
+    text-align: center;
+    color: #f00;
+    font-size: 2.5em; }
 
 .reiting-block {
   display: flex;

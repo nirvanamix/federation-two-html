@@ -63,7 +63,7 @@
 				"work_online" : false,
 				"price" : 100,
 				"sex" : "mele",
-				"key-poblem" : "hello1",
+				"key-poblem" : "hello",
 				"equipment": "tecnic-3",
 				"experience": "1"
 			}
@@ -97,7 +97,7 @@
 				"work_online" : false,
 				"price" : 100,
 				"sex" : "mele",
-				"key-poblem" : "hello1",
+				"key-poblem" : "hello3",
 				"equipment": "tecnic-3",
 				"experience": "1"
 			}
@@ -131,7 +131,7 @@
 				"work_online" : false,
 				"price" : 100,
 				"sex" : "mele",
-				"key-poblem" : "hello1",
+				"key-poblem" : "hello3",
 				"equipment": "tecnic-3",
 				"experience": "1"
 			}

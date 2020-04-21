@@ -172,6 +172,9 @@ var fillter_catalog = {
 					$(this).wrap('<div class="hide"></div>');
 				}
 			});
+			// check if no result
+			if($('.items-catalog > .item').last().index() < 0) $('.items-catalog').append('<div class="error-div">'+ $('.items-catalog').attr('data-error-text') +'</div>');
+				else $('.items-catalog .error-div').remove();
 			// show-show-more catalog
 			show_catalog.fun();
 		});

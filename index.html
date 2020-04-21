@@ -158,7 +158,7 @@
 							<span class="title">
 								Работает с проблемой:
 							</span>
-							<input type="text" placeholder="Одно слово или часть слова">
+							<input id="tags" type="text" placeholder="Одно слово или часть слова">
 						</label>
 						<label data-value="equipment">
 							<span class="title">
@@ -214,7 +214,7 @@
 			<h2>
 				Каталог арт-терапевтов
 			</h2>
-			<div class="items-catalog"></div>
+			<div class="items-catalog" data-error-text="К сожалению по вашему запросу ничего не найдено"></div>
 			<div class="link-page link-two link-show-moore">
 				<a href="#" class="show-catalog">
 					Смотреть ещё
@@ -424,6 +424,18 @@
 		<!-- query-ui-->
 		<script src="js/plugins/jquery-ui.js"></script>
 		<script src="js/plugins/query-ui-include.js"></script>
+		<script>
+			$( function() {
+				var availableTags = [
+					"hello1",
+					"hello2",
+					"hello3"
+				];
+				$( "#tags" ).autocomplete({
+					source: availableTags
+				});
+			});
+		</script>
 		<!-- query-ui-->
 		<script src="js/plugins/owl.carousel.js"></script>
 		<script src="js/plugins/owl.carousel-include.js"></script>
