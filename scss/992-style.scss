@@ -200,6 +200,113 @@ footer{
 		}
 	}
 }
+.section-speaker{
+	padding: 1.9rem 0 5.8rem;
+	.container-fluid{
+		align-items: flex-start;
+		& > .item{
+			&:first-child{
+				padding-left: 0;
+			}
+			&:nth-child(2){
+				width: 57.3%;
+				padding-top: 3.3rem;
+			}
+		}
+	}
+	.img{
+		img{
+			border-width: 3.2rem;
+		}
+	}
+	h1, .h1{
+		font-size: 4rem;
+	}
+	.link-page{
+		a{
+			padding: 1.2em 2.6em;
+		}
+	}
+	.listent{
+		right: 0.2rem;
+		bottom: -2.5rem;
+	}
+}
+.info-reiting{
+	display: block;
+	padding: 1.35rem 4.2rem;
+	margin-bottom: 1.8rem;
+	.item{
+		width: 100% !important;
+		&:first-child{
+			border-right: none;
+			border-bottom: 1px solid #357BBA;
+			padding-bottom: 0.5rem;
+		}
+		&:nth-child(2){
+			text-align: center;
+			padding-top: 2.2rem;
+		}
+	}
+}
+.section-about{
+	background-size: 18rem auto, 18rem auto;
+	padding: 1px 0 17.1rem;
+	h2, .h2{
+		margin-top: 4.6rem;
+	}
+	.container-fluid{
+		padding-left: 7.8rem;
+		padding-right: 7.8rem;
+		&:before{
+			left: 13.4rem;
+		}
+	}
+}
+.section-reviews{
+	padding: 1px 0 4.7rem;
+}
+.form-reviews{
+	margin-bottom: 9.3rem;
+}
+.reviews-items{
+	max-width: 63.9rem;
+	margin: 0 auto 4.5rem;
+	.item{
+		padding-left: 5.2rem;
+		margin-bottom: 3.9rem;
+	}
+}
+.title-wr{
+	display: block;
+	text-align: center;
+	h2, .h2{
+		margin-bottom: 3rem;
+	}
+}
+.owl-curses{
+	.owl-nav{
+		button{
+			span{
+				width: 4.4rem;
+				height: 4.4rem;
+				svg{
+					width: 10rem;
+				}
+			}
+		}
+	}
+}
+.section-festivals,
+.section-acardions
+{
+	padding: 5.4rem 0;
+}
+
+
+
+
+
 
 
 

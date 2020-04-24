@@ -51,4 +51,66 @@ jQuery(document).ready(function($) {
 		}
 	}
 	mobile_menu.fun();
+	var reiting_star = {
+		fun: function(){
+			$('.reiting-star label').hover(function() {
+				$(this).addClass('hover').prevAll('label').addClass('hover');
+				$(this).next('label').removeClass('hover');
+			});
+			$('.reiting-star').hover(function() {}, function() {
+				$(this).find('label').removeClass('hover')
+			});
+
+			$('.reiting-star label').click(function(event) {
+				$('.reiting-star label').removeClass('active');
+				$(this).addClass('active').prevAll('label').addClass('active');
+			});
+
+			$('.reiting-star').each(function(index, el) {
+				$(this).find('input').each(function(index, el) {
+					var checked = $(this).prop('checked');
+					if(checked == true){
+						$(this).parents('label').addClass('active').prevAll('label').addClass('active');
+					}
+				});
+			});
+		}
+	}
+	reiting_star.fun();
+
+	var reviews_items = {
+		fun: function(){
+			if($('.reviews-items .item:last()').index() <= 2) $('.reviews-items').next('.show-more-reviws').remove();
+			$('.show-more-reviws a').click(function(event) {
+				event.preventDefault();
+				$(this).parents('.show-more-reviws').prev('.reviews-items').addClass('active');
+				$(this).parents('.show-more-reviws').remove();
+			});
+		}
+	}
+	reviews_items.fun();
+
+	var acardion = {
+		fun: function(){
+			$('.acardion .top').click(function(event) {
+				$('.acardion .top').not($(this)).removeClass('active').parents('.item').find('.bottom').slideUp(400);
+				$(this).toggleClass('active').parents('.item').find('.bottom').slideToggle(400);
+			});
+		}
+	}
+	acardion.fun();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

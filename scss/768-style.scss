@@ -122,6 +122,104 @@ footer{
 .section-form{
 	background-size: 16.4rem auto, 22.1rem auto;
 }
+.section-speaker{
+	padding-top: 0;
+	.container-fluid{
+		display: block;
+		& > .item{
+			width: 100% !important;
+			&:nth-child(2){
+				padding-top: 4.3rem;
+			}
+		}
+	}
+	h1, .h1{
+		font-size: 2em;
+	}
+	p{
+		font-size: 1.5em;
+	}
+}
+.info-reiting{
+	padding: 1.35rem 1.5rem;
+	.item{
+		&:first-child{
+			display: block;
+			text-align: center;
+		}
+		&:nth-child(2){
+			padding-top: 2rem;
+		}
+	}
+	.count{
+		margin: 0;
+	}
+	.text{
+		br{
+			display: none;
+		}
+	}
+}
+.link-read-mmore{
+	font-size: 2rem;
+}
+.wr-sharing{
+	flex-direction: column;
+	.link-page{
+		margin: 0 0 1.7rem;
+		width: 100%;
+		a{
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.sharing{
+		padding: 0;
+	}
+}
+.section-about{
+	background-size: 15rem auto, 15rem auto;
+	.container-fluid{
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 7.2rem;
+		&:before{
+			content: none;
+		}
+	}
+	h2, .h2{
+		font-size: 2em;
+		margin-bottom: 1.4rem;
+	}
+	p{
+		font-size: 1.6em;
+	}
+}
+
+.two-lable{
+	display: block;
+	label{
+		width: 100%;
+	}
+}
+.section-reviews{
+	h2, .h2{
+		font-size: 2em;
+		margin-bottom: 2.6rem;
+	}
+}
+.form-reviews{
+	padding: 4.2rem 1.7rem 1px;
+}
+.reiting-form{
+	flex-direction: column;
+	.title{
+		margin: 0 0 1rem;
+		text-align: center;
+	}
+}
+
+
 
 
 

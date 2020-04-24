@@ -3,453 +3,96 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>main</title>
-	<!-- style -->
-	<link href="css/style.min.css" rel="stylesheet">
-	<!-- google fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap&subset=cyrillic" rel="stylesheet"> 
+	<!-- головне зображення сайту -->
+	<meta property="og:image" content="#"/>
+	<title>map</title>
 </head>
 <body>
-	<header>
-		<div class="container-fluid">
-			<div class="logo">
-				<img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="">
-			</div>
-			<nav>
-				<ul>
-					<li>
-						<a href="#">
-							Расписание событий
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Бесплатные уроки
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Курсы в записи
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Команда
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Магазин
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Контакты
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="mobile-menu"><div></div><div></div><div></div></div>
-		</div>
-	</header>
-	<section class="section-title">
-		<div class="container-fluid">
-			<div class="item">
-				<h1>
-					Международный каталог арт-терапевтов
-				</h1>
-				<ul>
-					<li>
-						На этой странице, вы можете найти и подобрать себе специалиста, а также взять его контакты для личной консультации.
-					</li>
-					<li>
-						Наши психологи являются членами международной федерации арт-терапии, и работают методами арт-терапии, и в других подходах. Можете оставить отзыв о вашей работе, о их мастер классах и выступлениях.
-					</li>
-					<li>
-						Для наиболее быстрого поиска и доступа - на странице есть фильтры (воспользуйтесь фильтрами поиска по городу, направлению работы, подходам)
-					</li>
-				</ul>
-				<div class="link-page">
-					<a href="#">
-						Найти специалиста
-					</a>
-				</div>
-			</div>
-			<div class="item">
-				<img src="img/title-img.png" alt="">
-			</div>
-		</div>
-	</section>
-	<section class="section-form">
-		<div class="container-fluid">
-			<form action="#">
-				<div class="block-title">
-					<h2>
-						пЕРВАЯ КОНСУЛЬТАЦИЯ У ОДНОГО ИЗ СПЕЦИАЛИСТОВ БЕСПЛАТНАЯ
-					</h2>
-					<div class="checks-block">
-						<h3>
-							Вы можете найти специалиста:
-						</h3>
-						<div class="labels-checkbox">
-							<label class="checkbox">
-								<input type="radio" checked name="radio" data-city="on">
-								в своём городе
-							</label>
-							<label class="checkbox">
-								<input type="radio" name="radio" data-city="off">
-								онлайн
-							</label>
-						</div>
-					</div>
-				</div>
-				<div class="block-form">
-					<div class="three-label">
-						<label data-value="city">
-							<span class="title">
-								Область, регион
-							</span>
-							<select class="select">
-								<option value="all">
-									Все
-								</option>
-								<option value="Kiev">
-									Киев
-								</option>
-								<option value="Vinnitsa">
-									Виницца
-								</option>
-								<option value="Lviv">
-									Львов
-								</option>
-							</select>
-						</label>
-						<div class="label">
-							<span class="title">
-								Средняя стоимость консультации:
-							</span>
-							<div class="labels-price">
-								<label data-value="min_price">
-									<input type="text" placeholder="от грн.">
-								</label>
-								<label data-value="max_price">
-									<input type="text" placeholder="до грн.">
-								</label>
-							</div>
-						</div>
-						<label data-value="sex">
-							<span class="title">
-								Пол:
-							</span>
-							<select class="select">
-								<option value="all">
-									Не важен
-								</option>
-								<option value="mele">
-									Мужской
-								</option>
-								<option value="female">
-									Женский
-								</option>
-							</select>
-						</label>
-						<label data-value="key-poblem">
-							<span class="title">
-								Работает с проблемой:
-							</span>
-							<input id="tags" type="text" placeholder="Одно слово или часть слова">
-						</label>
-						<label data-value="equipment">
-							<span class="title">
-								Используемые подходы и техники:
-							</span>
-							<select class="select">
-								<option value="all">
-									Все
-								</option>
-								<option value="tecnic-1">
-									Техника 1
-								</option>
-								<option value="tecnic-2">
-									Техника 2
-								</option>
-								<option value="tecnic-3">
-									Техника 3
-								</option>
-							</select>
-						</label>
-						<label data-value="experience">
-							<span class="title">
-								Лет практики не менее:
-							</span>
-							<select class="select">
-								<option value="all">
-									Не важено
-								</option>
-								<option value="1">
-									1 год
-								</option>
-								<option value="5">
-									5 лет
-								</option>
-								<option value="10">
-									10 лет
-								</option>
-								<option value="15">
-									15 лет
-								</option>
-							</select>
-						</label>
-					</div>
-					<div class="submit fill_submit">
-						<input type="submit" value="Найти специалиста">
-					</div>
-				</div>
-			</form>
-		</div>
-	</section>
-	<main class="section-main">
-		<div class="container-fluid">
-			<h2>
-				Каталог арт-терапевтов
-			</h2>
-			<div class="items-catalog" data-error-text="К сожалению по вашему запросу ничего не найдено"></div>
-			<div class="link-page link-two link-show-moore">
-				<a href="#" class="show-catalog">
-					Смотреть ещё
-				</a>
-			</div>
-			<h2>
-				Акции
-			</h2>
-			<div class="owl-carousel owl-action">
-				<div class="item">
-					<div class="text-wr">
-						<h3>
-							Международный каталог арт-терапевтов
-						</h3>
-						<p>
-							Наши психологи являются членами международной федерации арт-терапии, и работают методами арт-терапии, и в других подходах. Можете оставить отзыв о вашей работе, о их мастер классах и выступлениях.
-						</p>
-						<div class="link-page link-two">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="text-wr">
-						<h3>
-							Международный каталог арт-терапевтов
-						</h3>
-						<p>
-							Наши психологи являются членами международной федерации арт-терапии, и работают методами арт-терапии, и в других подходах. Можете оставить отзыв о вашей работе, о их мастер классах и выступлениях.
-						</p>
-						<div class="link-page link-two">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="text-wr">
-						<h3>
-							Международный каталог арт-терапевтов
-						</h3>
-						<p>
-							Наши психологи являются членами международной федерации арт-терапии, и работают методами арт-терапии, и в других подходах. Можете оставить отзыв о вашей работе, о их мастер классах и выступлениях.
-						</p>
-						<div class="link-page link-two">
-							<a href="#">
-								Подробнее
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="container-fluid top-footer">
-			<div class="item">
-				<div class="logo">
-					<img src="img/logo-white.png" srcset="img/logo-white@2x.png 2x" alt="">
-				</div>
-			</div>
-			<div class="item">
-				<ul>
-					<li>
-						<a href="#">
-							Расписание событий
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Бесплатные уроки
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Курсы в записи
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Команда
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Магазин
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Контакты
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="item">
-				<h3>
-					Контакты
-				</h3>
-				<ul class="list-ul">
-					<li>
-						<a href="#">
-							Украина, г. Киев  ул.Освободителей, 1
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							+38 (044) 334 67 10 ( Украина )
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							+7 (499) 380 72 08 ( Россия )
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							info@vtkosnova.org
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="item">
-				<h3>
-					Станьте нашим подписчиком
-				</h3>
-				<div class="social">
-					<a href="#">
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-vk"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-youtube"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-instagram"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-telegram" aria-hidden="true"></i>
-					</a>
-				</div>
-				<h3>
-					Скачайте наше приложение
-				</h3>
-				<div class="aplication">
-					<a href="#">
-						<img src="img/google-play.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="bottom-footer">
-			<div class="container-fluid">
-				<ul>
-					<li>
-						<a href="#">
-							Условия оказания услуг
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Условия возврата
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Политика конфиденциальности
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							Условия предзаказа услуг
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	<!-- modal winodows -->
-	<div class="modal-window" data-modal="sharing">
-		<div class="window">
-			<div class="close"></div>
-			<h2>
-				Сделать репост
-			</h2>
-			<div class="sharing-wr">
-				<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
-			</div>
-		</div>
-	</div>
-	<div class="modal-error" data-stasus="reiting">
-		Вы уже голосовали за этого спикера
-	</div>
-	<div class="modal-success" data-stasus="reiting">
-		Ваш голос был засчитан
-	</div>
-	<!-- script -->
-		<script src="js/jquery/jquery-3.4.1.min.js"></script>
-		<script src="js/load-json.js"></script>
-		<!-- functions -->
-		<script src="js/function.js"></script>
-		<!-- query-ui-->
-		<script src="js/plugins/jquery-ui.js"></script>
-		<script src="js/plugins/query-ui-include.js"></script>
-		<script>
-			$( function() {
-				var availableTags = [
-					"hello1",
-					"hello2",
-					"hello3"
-				];
-				$( "#tags" ).autocomplete({
-					source: availableTags
-				});
-			});
-		</script>
-		<!-- query-ui-->
-		<script src="js/plugins/owl.carousel.js"></script>
-		<script src="js/plugins/owl.carousel-include.js"></script>
-		<!-- pluso -->
-		<script type="text/javascript">(function() {
-			if (window.pluso)if (typeof window.pluso.start == "function") return;
-			if (window.ifpluso==undefined) { window.ifpluso = 1;
-				var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-				s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-				s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-				var h=d[g]('body')[0];
-				h.appendChild(s);
-			}})();
-		</script>
-	<!-- script -->
+<h1>
+	<img src="img/logo.png" width="220" alt="">
+</h1>
+	<ul class='count_ul'>
+		<li>
+			<a href="main.html" target="blanck">
+				main
+			</a>
+		</li>
+		<li>
+			<a href="inner-page.html" target="blanck">
+				inner-page
+			</a>
+		</li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: Arial;
+		}
+		h1{
+			text-align: center;
+			margin: 10px 0;
+		}
+		ul.count_ul{
+			margin: 0;
+			width: 400px;
+			margin: auto;
+			border-top: 1px solid #ccc;
+			counter-reset: list1;
+			margin-bottom: 40px;
+		}
+		ul.count_ul > li{
+			list-style: none;
+			margin-bottom: 0px;
+			border: 1px solid #ccc;
+			border-top: none;
+			width: 100%;
+		}
+		ul.count_ul > li > a:before{
+			counter-increment: list1;
+			content: counter(list1) ". ";
+		}
+		a{
+			font-size: 18px;
+			color: #15669F;
+			text-decoration: none;
+			display: block;
+			padding: 6px 10px;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		ul.count_ul > li ul li{
+			list-style: none;
+			padding-left: 40px;
+			border-top: 1px solid #ccc;
+		}
+		ul.count_ul > li ul{
+			counter-reset: list2;
+		}
+		ul.count_ul > li ul a:before{
+			counter-increment: list2;
+			content: counter(list2) ". ";
+		}
+		p{
+			color: #f00;
+			padding: 4px 10px;
+		}
+	</style>
 </body>
 </html>
