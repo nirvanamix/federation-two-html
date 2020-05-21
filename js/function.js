@@ -100,7 +100,30 @@ jQuery(document).ready(function($) {
 	}
 	acardion.fun();
 
-
+	var audio = {
+		fun: function(){
+			var audio = document.getElementById("myAudio");
+			$('.listent a').click(function(event) {
+				event.preventDefault();
+				$('.modal-audio').addClass('active');
+				audio.play();
+				if($(this).hasClass('active')){
+					audio.pause();
+					$('.modal-audio').removeClass('active');
+				}
+				else{
+					audio.play();
+				}
+				$(this).toggleClass('active');
+			});
+			$('.modal-audio .close').click(function(event) {
+				$('.modal-audio').removeClass('active');
+				audio.pause();
+				$('.listent a').removeClass('active')
+			});
+		}
+	}
+	audio.fun();
 
 
 

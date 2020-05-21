@@ -745,10 +745,15 @@ body{
 		}
 		.text-block{
 			width: 58.9%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding-bottom: 1.5rem;
 		}
 	}
 	h3, .h3{
-		font-size: 2em;
+		font-size: 1.9em;
+		line-height: 1.2em;
 		font-family: $font-mono;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -859,6 +864,12 @@ body{
 				margin-left: 1.1rem;
 			}
 		}
+		a{
+			display: inline-block;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
 	}
 	.error-div{
 		width: 100%;
@@ -907,6 +918,13 @@ body{
 		width: 100%;
 		& > div, .pluso-wrap{
 			width: 100%;
+		}
+	}
+	a{
+		color: $color-blue;
+		display: inline-block;
+		&:hover{
+			text-decoration: underline;
 		}
 	}
 }
@@ -1155,39 +1173,39 @@ footer{
 		padding: 4rem 2rem;
 		position: relative;
 		border-radius: 3px;
-		.close{
-			width: 1.9rem;
-			height: 1.9rem;
-			position: absolute;
-			top: 1rem;
-			right: 1rem;
-			cursor: pointer;
-			transition: opacity 0.3s;
-			&:hover{
-				opacity: 0.8;
-			}
-			&:before, &:after{
-				content: '';
-				width: 100%;
-				height: 2px;
-				display: block;
-				position: absolute;
-				top: calc(50% - 1px;);
-				left: 0;
-				background: $color-blue;
-			}
-			&:before{
-				transform: rotate(45deg);
-			}
-			&:after{
-				transform: rotate(-45deg);
-			}
-		}
 		h2, .h2{
 			font-size: 2rem;
 			letter-spacing: 0;
 			font-family: $font-mono;
 		}
+	}
+}
+.close{
+	width: 1.9rem;
+	height: 1.9rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	transition: opacity 0.3s;
+	&:hover{
+		opacity: 0.8;
+	}
+	&:before, &:after{
+		content: '';
+		width: 100%;
+		height: 2px;
+		display: block;
+		position: absolute;
+		top: calc(50% - 1px;);
+		left: 0;
+		background: $color-blue;
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+	&:after{
+		transform: rotate(-45deg);
 	}
 }
 .sharing-wr{
@@ -1365,6 +1383,20 @@ footer{
 	.link-page{
 		margin-right: 2rem;
 	}
+	.contacts{
+		margin-right: 2rem;
+		max-width: 100%;
+		.top{
+			padding: 1.2em 3.2em;
+			font-size: 1.6em;
+		}
+		.bottom{
+			padding: 1.6em 1.5em;
+			svg{
+				width: 1.7rem;
+			}
+		}
+	}
 }
 .section-about{
 	padding: 1px 0 19rem;
@@ -1420,7 +1452,7 @@ footer{
 	background: #FFFFFF;
 	box-shadow: 0px 4px 50px rgba(36, 102, 162, 0.2);
 	margin-top: -11.6rem;
-	margin-bottom: 7.2rem;
+	margin-bottom: 5.2rem;
 	position: relative;
 	z-index: 5;
 	label{
@@ -1488,6 +1520,7 @@ footer{
 	margin: 0 auto;
 	max-width: 97.1rem;
 	margin-bottom: 5.8rem;
+	padding-top: 2.2rem;
 	&.active{
 		.item{
 			display: block !important;
@@ -1830,6 +1863,110 @@ footer{
 .tegs .list{
 	margin-right: 1rem;
 }
+
+
+
+
+
+.contacts{
+	position: relative;
+	display: inline-block;
+	max-width: 12rem;
+	svg{
+		width: 1.6rem;
+		height: auto;
+		fill: #fff;
+	}
+	.top{
+		width: 100%;
+		display: inline-block;
+		padding: 1em 1em;
+		font-size: 1.1em;
+		color: #fff;
+		background: #357BBA;
+		border-radius: 3.5rem;
+		border: none;
+		text-align: center;
+		user-select: none;
+		cursor: pointer;
+		transition: box-shadow 0.3s;
+		&:hover{
+			box-shadow: 0px 4px 25px rgba(53, 123, 186, 0.5);
+		}
+		&:active{
+			transition: all 0s;
+			box-shadow: none;
+		}
+	}
+	.bottom{
+		display: none;
+		position: absolute;
+		width: 100%;
+		top: 100%;
+		padding: 1em 1.2em;
+		background: #357BBA;
+		z-index: 9;
+		border-radius: 0 0 1.75rem 1.75rem;
+		justify-content: space-between;
+		border-top: 1px solid #fff;
+		a{
+			display: block;
+			opacity: 0.7;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	&.active{
+		.top{
+			border-radius: 1.75rem 1.75rem 0 0;
+		}
+		.bottom{
+			display: flex;
+		}
+	}
+}
+
+
+
+
+
+.modal-audio{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	background: rgba(255,255,255, 0.8);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s;
+	transform: translateY(-100%);
+	padding: 0 1em;
+	&.active{
+		transform: translateY(0);
+	}
+	.close{
+		position: relative;
+		top: auto;
+		right: auto;
+		margin-left: 2rem;
+	}
+	audio{
+		width: calc(100% - 4rem);
+		max-width: 500px;
+		display: block;
+	}
+}
+
+
+
+
+
+
 
 
 
