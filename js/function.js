@@ -25,15 +25,21 @@ jQuery(document).ready(function($) {
 				$('.modal-window').fadeOut(400).removeClass('active');
 				var data_modal = $(this).attr('data-modal');
 				$('.modal-window[data-modal="' + data_modal +'"]').fadeIn(400).addClass('active');
+				// video
+				$('.modal-window[data-modal="' + data_modal +'"]').find('video').trigger('play');
 			});
 			$('body').on('click', '.close', function(event){
 				$('.modal-window').fadeOut(400);
 				$('.modal-window').removeClass('active');
+				// video
+				$('.modal-window[data-modal]').find('video').trigger('pause');
 			});
 			jQuery(".modal-window").click( function(event){
 				if(jQuery(event.target).closest(".window").length ) 
 				return;
 					$('.modal-window').fadeOut(400).removeClass('active');
+					// video
+					$('.modal-window[data-modal]').find('video').trigger('pause');
 				event.stopPropagation();
 			});
 			/*modal windows*/
@@ -103,7 +109,7 @@ jQuery(document).ready(function($) {
 	var audio = {
 		fun: function(){
 			var audio = document.getElementById("myAudio");
-			$('.listent a').click(function(event) {
+			$('.listent a.has-audio').click(function(event) {
 				event.preventDefault();
 				$('.modal-audio').addClass('active');
 				audio.play();
@@ -124,16 +130,31 @@ jQuery(document).ready(function($) {
 		}
 	}
 	audio.fun();
-
-
-
-
-
-
-
-
-
-
-
-
 });
+
+
+
+
+var global_modal = {
+	fun: function(th){
+		$('.modal-window[data-modal]').fadeOut(400).removeClass('active');
+		$('.modal-window[data-modal]').find('video').trigger('pause');
+		$('.modal-window[data-modal="' + th +'"]').fadeIn(400).addClass('active');
+	}
+}
+// global_modal.fun('thanks');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1156,6 +1156,9 @@ footer{
 	background: rgba(0,0,0,0.8);
 	text-align: center;
 	display: none;
+	&.show{
+		display: block !important;
+	}
 	&:before {
 		content: "";
 		display: inline-block;
@@ -1177,6 +1180,17 @@ footer{
 			font-size: 2rem;
 			letter-spacing: 0;
 			font-family: $font-mono;
+		}
+	}
+	&[data-modal="video"]{
+		.window{
+			padding: 0;
+			background: none;
+			max-width: 700px;
+		}
+		video{
+			width: 100%;
+			display: block;
 		}
 	}
 }

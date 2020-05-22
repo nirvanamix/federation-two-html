@@ -7341,6 +7341,8 @@ footer {
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
   display: none; }
+  .modal-window.show {
+    display: block !important; }
   .modal-window:before {
     content: "";
     display: inline-block;
@@ -7361,6 +7363,13 @@ footer {
       font-size: 2rem;
       letter-spacing: 0;
       font-family: "PT Mono"; }
+  .modal-window[data-modal="video"] .window {
+    padding: 0;
+    background: none;
+    max-width: 700px; }
+  .modal-window[data-modal="video"] video {
+    width: 100%;
+    display: block; }
 
 .close {
   width: 1.9rem;

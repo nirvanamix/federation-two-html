@@ -60,7 +60,8 @@
 					<img src="img/spicer-cirkle.png" alt="">
 				</div>
 				<div class="listent">
-					<a href="#">
+					<!-- class="has-audio" -->
+					<a href="#" data-modal="video">
 						<img src="img/listen.svg" alt="">
 						Прослушать приветствие
 					</a>
@@ -688,6 +689,24 @@
 			src="audio.mp3">
 		</audio>
 		<div class="close"></div>
+	</div>
+	<div class="modal-window" data-modal="video">
+		<div class="window">
+			<div class="close"></div>
+			<video src="video.mp4" controls class="video-modal"></video>
+		</div>
+	</div>
+
+	<div class="modal-window" data-modal="thanks">
+		<div class="window">
+			<div class="close"></div>
+			<h2>
+				Спасибо ваш заказ принят
+			</h2>
+			<div class="sharing-wr">
+				<div class="pluso" data-background="transparent" data-options="medium,square,line,vertical,nocounter,theme=08" data-services="facebook,vkontakte"></div>
+			</div>
+		</div>
 	</div>
 	<!-- script -->
 		<script src="js/jquery/jquery-3.4.1.min.js"></script>
